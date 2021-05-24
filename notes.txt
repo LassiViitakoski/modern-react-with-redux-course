@@ -1,0 +1,16 @@
+Linkit
+    -> https://semantic-ui.com/ -> Valmiita tyylittelyjä
+    -> https://github.com/marak/Faker.js/ -> Feikki dataa omiin projekteihin
+        -> Importataan Reactilla ja käytetään esim. <img src={Faker.iamge.avatar()} />
+
+Create new react app -> npx create-react-app 'projektin nimi'
+
+HTML style-blokki -> "background-color: red; border-radius: 100px"
+JSX  style-blokki -> {{ backgroundColor: 'red', borderRadius: '100px' }}
+
+HTML -> class="label"
+JSX  -> className="label"
+
+Compononent Nesting -> A component can be shown inside of another
+Component Resuability -> We want to make components that can easily reused through out application
+Component Configuration -> We should ne able to configure a component when it is created

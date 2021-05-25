@@ -14,3 +14,27 @@ JSX  -> className="label"
 Compononent Nesting -> A component can be shown inside of another
 Component Resuability -> We want to make components that can easily reused through out application
 Component Configuration -> We should ne able to configure a component when it is created
+
+States
+    -> Only usable with class components (technically can be used with functional components using the 'hooks' system)
+    -> You will confuse props with state
+    -> 'State' is a Javascript object that contains data relevant to a component
+    -> Updating 'state' on a component causes the component to (almost) instantly rerender
+    -> State must be initialized when a component is created
+    -> State can only be updated using the function 'setState'
+
+3rd-exercise - App lifecycle walkthrough
+    -> JS file loaded by browser
+    -> Instace of App component is created
+    -> App components 'constructor' function gets called
+    -> State object is created and assigned to the 'this.state' property
+    -> We call geolocation service
+    -> React calls the components render method
+    -> App returns JSX, gets rendered to page as HTML
+
+    -> We get result of geolocation!
+    -> We update our state object with a call to 'this.setState'
+    -> React sees that we updated the state of a component
+    -> React calls our 'render' method a second time
+    -> Render method returns some (updated) JSX
+    -> React take that JSX and updates content on the screen

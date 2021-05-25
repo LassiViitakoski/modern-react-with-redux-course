@@ -38,3 +38,28 @@ States
     -> React calls our 'render' method a second time
     -> Render method returns some (updated) JSX
     -> React take that JSX and updates content on the screen
+
+Component Lifecycle
+    -> constructor()
+        -> Älä hae dataa constructorissa (suositus)
+    -> render()
+    
+    -> Content visible on screen
+    -> componentDidMount()
+        -> Tekee funktiolle määritellyn asian, kun komponentti tulee renderöidään ensimmäisen kerran
+            -> Hyvä esimerkiksi datan hakemiseen (API-kyselyt yms.)
+
+    -> Sit and wait for updates
+    -> componentDidUpdate()
+        -> Tekee funktiolle määritellyn asian, kun komponentti renderöidään uudestaan
+            -> Hyvä esimerkiksi datan hakemiseen, kun state/props muuttuu
+
+    -> Sit and wait until this component is not longer shown
+    -> componentWillUnmount()
+        -> Tekee funktiolle määritellyn asian, kun komponentti tuhoutuu/poistuu
+            -> Hyvä paikka tehdä cleanup
+
+Other lifecycle methods (rarely used)
+    -> shouldComponentUpdate()
+    -> getDerivedStateFromProps
+    -> getSnapshotBeforeUpdate

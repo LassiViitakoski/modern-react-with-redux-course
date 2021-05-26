@@ -63,3 +63,7 @@ Other lifecycle methods (rarely used)
     -> shouldComponentUpdate()
     -> getDerivedStateFromProps
     -> getSnapshotBeforeUpdate
+
+Component.defaultProps = {
+    message: 'Loading...'
+};   -> Asettaa komponentille default message propsin

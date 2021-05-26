@@ -67,3 +67,5 @@ Other lifecycle methods (rarely used)
 Component.defaultProps = {
     message: 'Loading...'
 };   -> Asettaa komponentille default message propsin
+
+Jos this.state yms. this. aiheuttaa errorin -> Käytä arrow funktiota

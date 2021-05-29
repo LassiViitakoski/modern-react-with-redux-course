@@ -15,6 +15,10 @@ Compononent Nesting -> A component can be shown inside of another
 Component Resuability -> We want to make components that can easily reused through out application
 Component Configuration -> We should ne able to configure a component when it is created
 
+Jos kutsutaan funktiota event listenerissa esim. onClick tyylillä onClick={handleEvent()}
+    -> Suorittaa handle event koodin, kun komponentti luodaan
+    -> Täytyy käyttää muotoa onClick={() => handleEvent()}
+
 States
     -> Only usable with class components (technically can be used with functional components using the 'hooks' system)
     -> You will confuse props with state

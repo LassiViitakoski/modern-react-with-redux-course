@@ -75,3 +75,33 @@ Jos on lista elementtejä, jotka halutaan laittaa DOM:iin, jokaisen elementin ro
 React Refs
     -> Gives access to a single DOM element
     -> We create refs in the constructor, assign them to instance variables, then pass to a particular JSX element as props
+    -> Täytyy käyttää Reactin Ref:ejä, jos halutaan päästä käsiksi DOM elementtien ominaisuuksiin
+
+
+Hooks System
+    -> useState 
+        -> function that lets you use state in a functional component
+
+    -> useEffect
+        -> function that lets you use something like lifecycle methods in a functional component
+    
+    -> useRef
+        -> function that lets you create 'ref' in a function component
+
+Primitive Hooks
+    -> useState
+    -> useEffect
+    -> useContext
+    -> useReducer
+    -> useCallback
+    -> useMemo
+    -> useRef
+    -> useImperativeHandle
+    -> useLayoutEffect
+    -> useDebugValue
+
+// OUR OWN MADE HOOK
+Custom Hook
+    -> useTranslate
+        -> useState
+        -> useEffect

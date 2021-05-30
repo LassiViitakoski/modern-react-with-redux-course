@@ -17,7 +17,7 @@ Component Configuration -> We should ne able to configure a component when it is
 
 Jos kutsutaan funktiota event listenerissa esim. onClick tyylillä onClick={handleEvent()}
     -> Suorittaa handle event koodin, kun komponentti luodaan
-    -> Täytyy käyttää muotoa onClick={() => handleEvent()}
+    -> Täytyy käyttää muotoa onClick={() => handleEvent()} tai muotoon onClick={handleEvent}
 
 States
     -> Only usable with class components (technically can be used with functional components using the 'hooks' system)
@@ -44,6 +44,8 @@ States
     -> React take that JSX and updates content on the screen
 
 Component Lifecycle
+    -> Vain class based componenteissa
+
     -> constructor()
         -> Älä hae dataa constructorissa (suositus)
     -> render()
@@ -95,6 +97,26 @@ Hooks System
 Primitive Hooks
     -> useState
     -> useEffect
+        -> Allows function components to use something like lifecycle methods
+        -> We configure the hook to run some code automatically in one of three scenarios
+            -> When the component is renderes for the first time only
+            -> When the component is rendered for the first time and whenever it renderes
+            -> When the component is rendered for the first time and (whenever it rerenderes and some piece of data has changed)
+        -> useEffect Second Argument
+            -> [] 
+                -> Run at initial render
+
+            -> ..nothing.. 
+                -> Run at initial render 
+                -> Run after every rerender
+
+            -> [data]
+                -> Run at initial render 
+                -> Run after every rerender if some data inside of array has changed
+        
+        -> Extra knowledge about useEffect
+            -> 
+
     -> useContext
     -> useReducer
     -> useCallback

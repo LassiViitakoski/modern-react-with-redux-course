@@ -33,16 +33,25 @@ const options = [
     },
 ]
 
-export default () => {
+const App = () => {
     const [selected, setSelected] = useState(options[0]);
+    const [showDropdown, setShowDropdown] = useState(true);
 
     return (
         <div>
-            <DropDown 
-                selected={selected} 
-                onSelectedChange={setSelected} 
-                options={options} 
-            />
+            <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
+            { showDropdown ? (
+                <DropDown
+                    selected={selected}
+                    onSelectedChange={setSelected}
+                    options={options}
+                    showDropdown={showDropdown}
+                />
+            ) : null
+            }
+            
         </div>
     );
 };
+
+export default App;

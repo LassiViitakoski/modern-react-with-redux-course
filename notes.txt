@@ -131,3 +131,6 @@ Custom Hook
     -> useTranslate
         -> useState
         -> useEffect
+
+-> Jos JSX:än sisällä komponentti laitetaan toisen komponentin sisälle -> se tulee children nimisenä propsina.
+-> Sama homma jos JSX:än sisällä komponentin sisälle laitetaan esim tekstiä.

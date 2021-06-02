@@ -3,6 +3,39 @@ Linkit
     -> https://github.com/marak/Faker.js/ -> Feikki dataa omiin projekteihin
         -> Importataan Reactilla ja käytetään esim. <img src={Faker.iamge.avatar()} />
 
+Codepen-Linkit
+    -> https://codepen.io/LassiViitakoski/pen/ZEevNaa?editors=0010
+
+Add project to empty git repo
+    -> git add *
+    -> git commit -m ""
+    -> git remote add origin https:///
+    -> git push origin master
+
+Web-server providers
+    -> Vercel
+    -> Netlify
+
+
+
+const name = 'Lassi';
+
+const object = {
+    name: name,
+}
+
+object.name -> Lassi
+
+const object = {
+    name
+}
+
+object.name -> Lassi
+
+--> Objektit voidaan määritellä molemmilla tavoilla
+
+
+
 Create new react app -> npx create-react-app 'projektin nimi'
 
 HTML style-blokki -> "background-color: red; border-radius: 100px"
@@ -132,5 +165,80 @@ Custom Hook
         -> useState
         -> useEffect
 
+Custom Hooks
+    -> Best way to create reusable code in a React project (besides components!)
+    -> Created by exracting hook-related code out of a function component
+    -> Custom hooks always make use of at least one primitive hook internally
+    -> Each custom hook should have one purpose
+    -> Kind of an art form!
+    -> Data-fetching is a great thing to try to make reusable
+
+Process for creating reusable hooks
+    -> Identify each line of code related to some single purpose
+    -> Identify the inputs to that code
+    -> Identify the outputs to that code
+    -> Extract all of the code into a seperate function, receiving the inputs as arguments, and returning the outputs
+
 -> Jos JSX:än sisällä komponentti laitetaan toisen komponentin sisälle -> se tulee children nimisenä propsina.
 -> Sama homma jos JSX:än sisällä komponentin sisälle laitetaan esim tekstiä.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REDUX!
+
+What is Redux?
+    -> State management library
+    -> Makes creating complex applications easier
+    -> Not required to create a React app
+    -> Not explicitly designed to work with React
+
+Redux Cycle
+    -> Action Creator
+    -> Action
+    -> Dispatch
+    -> Reducers
+    -> State
+
+Redux-thunk
+    -> Middleware to help us make requests in a redux application
+
+General Data Loading With Redux
+    -> Component gets rendered onto screen --------------------->---------------------------------------->|
+    -> Component's 'componentDidMount' lifecycle method gets called ----------->------------------------->|-----> { Components are generally responsible for fetching data
+    -> We call action creator from 'componentDidMount' --------------->---------------------------------->|         they need by calling an action creator }
+
+    -> Action creator runs code to make an API requests ------------>------------------------------------>|
+    -> API responds with data ----------------->------------------------------>-------------------------->|-----> { Action creators are responsible for making API request (This is where Redux-Thunk comes into play) }
+    -> Action creator return an 'action' with the fetched data on the 'payload' property---->------------>|       
+
+    -> Some reducer sees the action, returns the data off the 'payload' ------->------------------------->|-----> { We get fetched data into a component by generating new stae in our redux
+    -> Because we generated some new state object, redux/react-redux cause our React app to be rendered ->|         store, then getting that into our component through mapStateToProps }
+
+
+Middleware in Redux
+    -> Function that gets called with every action we dispatch
+    -> Has the ability to STOP, MODIFY, or otherwise mess around with actions
+    -> Tons of open source middleware exists
+    -> Most popular use of middleware is for dealing with async actions
+    -> We are going to use a middleware called 'Redux-Thunk' to solve our async issues
+
+
+Action creators Normal Rules
+    -> Action Creators must return action objects
+    -> Actions must have a type property
+    -> Actions can optionally have a 'payload'
+
+
+Rules with Redux Thunk
+    -> Action Creators can return action objects
+                        or
+    -> Action Creators can return functions!
+        -> If an object gets returned, it must have a type
+        -> If an action object gets returned, it can optionally have a 'payload'
+
+
+Rules of Reducers
+    -> Must return value besides 'undefined'
+    -> Produces 'state', or data to be used inside of your app using only previous state and the action
+    -> Must not return reach 'out of itself' to decide what value to return (reducers are pure)
+    -> Must not mutate its input 'state' argument

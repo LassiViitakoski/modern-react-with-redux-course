@@ -6,6 +6,9 @@ Linkit
 Codepen-Linkit
     -> https://codepen.io/LassiViitakoski/pen/ZEevNaa?editors=0010
 
+Jos käytät callback funktioita
+    -> Määrittele ne aina arrow-funktioiksi, jotta this-määreet pysyvät oikeina
+
 Add project to empty git repo
     -> git add *
     -> git commit -m ""

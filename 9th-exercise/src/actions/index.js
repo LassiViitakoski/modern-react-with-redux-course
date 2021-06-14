@@ -9,7 +9,7 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
         _.map(getState().posts, 'userId'))
             .forEach(id => dispatch(fetchUser(id)));
     */
-
+    
     _.chain(getState().posts)
         .map('userId')
             .uniq()

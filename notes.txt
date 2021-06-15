@@ -286,3 +286,10 @@ Muita käyttökelpoisia lodash funktioita
     -> _.chain()
         -> jos chainataan funktio -> muissa funktioissa ei tarvitse käyttää alaviivaa
     -> _.uniq()
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Important note about React-Router!
+    - Each component needs to be designed to work on isolation (fetch its own data!)

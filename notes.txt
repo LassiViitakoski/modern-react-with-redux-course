@@ -164,9 +164,6 @@ Primitive Hooks
             -> [data]
                 -> Run at initial render 
                 -> Run after every rerender if some data inside of array has changed
-        
-        -> Extra knowledge about useEffect
-            -> 
 
     -> useContext
     -> useReducer
@@ -293,3 +290,23 @@ Muita käyttökelpoisia lodash funktioita
 
 Important note about React-Router!
     - Each component needs to be designed to work on isolation (fetch its own data!)
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Context System!!!
+
+Props System
+    -> Gets data from a parent component to a direct child component
+
+Context System
+    -> Gets data from a parent component to any nested child component
+    -> Two ways to get information in
+        -> Default Value
+        -> Parent Component Provider
+    
+    -> Two ways to get information out
+        -> this.context
+        -> Consumer
+

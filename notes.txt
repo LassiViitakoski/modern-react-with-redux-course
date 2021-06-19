@@ -297,6 +297,8 @@ Important note about React-Router!
 
 Context System!!!
 
+Purpose of Context System is to share information
+
 Props System
     -> Gets data from a parent component to a direct child component
 
@@ -308,5 +310,13 @@ Context System
     
     -> Two ways to get information out
         -> this.context
+            -> If we want get information out of single context object
         -> Consumer
+            -> If we want get information out of multiple different context objects, inside of single component
+            -> Inside Consumer, we have to have only single argument, which is function
 
+
+If we want to use Context in place of Redux
+    -> We need to be able to get data to any component in our hierarchy
+    -> We need to be able to seperate our view logic from business logic
+    -> We need to be able to split up business logic (not have a single file with 10000 lines of code)
